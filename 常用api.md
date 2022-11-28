@@ -1,5 +1,20 @@
-- `torch.cat` 拼接张量  
-- `torch.chunk(input, chunks, dim=0) → List of Tensors` 分割 chunks返回chunks的数量
+- `torch.cat` [拼接张量](https://pytorch.org/docs/stable/generated/torch.cat.html?highlight=cat#torch.cat)  
+- `torch.chunk(input, chunks, dim=0) → List of Tensors` [分割](https://pytorch.org/docs/stable/generated/torch.chunk.html?highlight=chunk#torch.chunk) chunks返回chunks的数量
 - `torch.gather(input, dim, index, *, sparse_grad=False, out=None) `
-   沿着维度取一些张量 某一行或某一列的数据顺序重组
-- `torch.reshape(input, shape) → Tensor` 改变形状不改变顺序
+   沿着维度取一些张量 某一行或某一列的数据顺序[重组](https://pytorch.org/docs/stable/generated/torch.gather.html?highlight=gather#torch.gather)
+- `torch.reshape(input, shape) → Tensor` [改变形状不改变顺序](https://pytorch.org/docs/stable/generated/torch.reshape.html?highlight=reshape#torch.reshape) 乘积相等可以reshape
+- `torch.split(tensor, split_size_or_sections, dim=0)` [分割](https://pytorch.org/docs/stable/generated/torch.split.html?highlight=split#torch.split)
+- `torch.squeeze(input, dim=None)` [移除掉dim维度](https://pytorch.org/docs/stable/generated/torch.squeeze.html?highlight=squeeze#torch.squeeze)
+- `torch.stack(tensors, dim=0, *, out=None)` [沿着维度连接张量](https://pytorch.org/docs/stable/generated/torch.stack.html?highlight=stack#torch.stack)
+- `Each torch.Tensor has a torch.dtype, torch.device, and torch.layout.` [属性](https://pytorch.org/docs/stable/tensor_attributes.html)
+- `torch.take(input, index) → Tensor` [索引取出张量](https://pytorch.org/docs/stable/generated/torch.take.html#torch.take) input看成一维张量 ，按照index取出。
+- `torch.tile(input, dims) → Tensor` [复制](https://pytorch.org/docs/stable/generated/torch.tile.html#torch.tile)
+- `torch.transpose(input, dim0, dim1) → Tensor` [转置](https://pytorch.org/docs/stable/generated/torch.transpose.html#torch.transpose)
+- `torch.unbind(input, dim=0) → seq` [返回切片元组](https://pytorch.org/docs/stable/generated/torch.unbind.html#torch.unbind) 可以降维
+- `torch.unsqueeze(input, dim) → Tensor` [新增维度](https://pytorch.org/docs/stable/generated/torch.unsqueeze.html#torch.unsqueeze)
+- `torch.where(condition, x, y) → Tensor` [判断](https://pytorch.org/docs/stable/generated/torch.where.html#torch.where) 根据condition 返回x还是y
+- `torch.manual_seed(seed)` [随机种子](https://pytorch.org/docs/stable/generated/torch.manual_seed.html#torch.manual_seed)
+- `torch.bernoulli(input, *, generator=None, out=None) → Tensor` [伯努利分布](https://pytorch.org/docs/stable/generated/torch.bernoulli.html#torch.bernoulli) 返回0，1
+- `torch.normal(mean, std, *, generator=None, out=None) → Tensor` [高斯分布](https://pytorch.org/docs/stable/generated/torch.normal.html#torch.normal)
+- `torch.rand(*size, *, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False, pin_memory=False) → Tensor` [均匀分布](https://pytorch.org/docs/stable/generated/torch.rand.html#torch.rand) 0，1均匀的浮点数
+-`torch.randn(*size, *, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False, pin_memory=False) → Tensor` [正态分布采样](https://pytorch.org/docs/stable/generated/torch.randn.html#torch.randn) 标准的正态分布得到一个浮点数
